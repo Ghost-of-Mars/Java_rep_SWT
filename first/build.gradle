@@ -1,20 +1,26 @@
-apply plugin: 'java'
-apply plugin: 'application'
-mainClassName = "one"
+plugins {
+    id 'java'
+    id 'application'
+//    id 'org.javamodularity.moduleplugin' version '1.8.11' apply false
+//    id 'org.openjfx.javafxplugin' version '0.0.13' apply false
+//    id 'org.beryx.jlink' version '2.25.0' apply false
+}
+
+application {
+    mainClass = 'one'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.7.0'
+}
 
 //sourceCompatibility = '17'
-//apply plugin: "org.openjfx.javafxplugin" version "0.0.13"
-//plugins {
-//    //id 'java'
-//    //id 'application'
-//    //id 'org.javamodularity.moduleplugin' version '1.8.11' apply false
-//    //id 'org.openjfx.javafxplugin' version '0.0.13' apply false
-//    //id 'org.beryx.jlink' version '2.25.0' apply false
-//}
 
-//application {
-//    mainClass = 'one'
-//}
+
 
 
 
