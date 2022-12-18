@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+//    id 'org.javamodularity.moduleplugin' version '1.8.11' apply false
+//    id 'org.openjfx.javafxplugin' version '0.0.13' apply false
+//    id 'org.beryx.jlink' version '2.25.0' apply false
+}
+
+application {
+    mainClass = 'one'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.7.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.7.2'
+}
+
+//sourceCompatibility = '17'
+
+
+
+
+
+
