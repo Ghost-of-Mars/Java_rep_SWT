@@ -6,7 +6,7 @@ public class Two {
         Point two = new Point(3.14, 3.14);
 
         System.out.println(Point.distance(one, two));
-        System.out.println(one.distanceNonStatic(one, two));
+        System.out.println(one.distanceNonStatic(two));
 
     }
 }

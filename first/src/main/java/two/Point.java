@@ -15,9 +15,9 @@ public class Point {
         return Math.sqrt(p2xMinusP1xSquared + p2yMinusP1ySquared);
     }
 
-    public double distanceNonStatic(Point p1, Point p2) {
-        double p2xMinusP1xSquared = Math.pow(p2.X - p1.X, 2);
-        double p2yMinusP1ySquared = Math.pow(p2.Y - p1.Y, 2);
+    public double distanceNonStatic(Point p) {
+        double p2xMinusP1xSquared = Math.pow(p.X - this.X, 2);
+        double p2yMinusP1ySquared = Math.pow(p.Y - this.Y, 2);
         return Math.sqrt(p2xMinusP1xSquared + p2yMinusP1ySquared);
     }
 }
