@@ -30,7 +30,7 @@ public class GroupCreationTests {
 
     @Test
     public void testGroupCreation() throws Exception {
-        gotToGroupPage();
+        goToGroupPage();
         initGroupCreation();
         fillGroupForm(new GroupData("Master", "Master_header", "Master_footer"));
         submitGroupCreation();
@@ -59,7 +59,7 @@ public class GroupCreationTests {
         wd.findElement(By.name("new")).click();
     }
 
-    private void gotToGroupPage() {
+    private void goToGroupPage() {
         wd.findElement(By.linkText("groups")).click();
     }
 
