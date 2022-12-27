@@ -1,4 +1,4 @@
-package addressbook.tests;
+package addressbook.tests.models;
 
 import java.util.Objects;
 
