@@ -20,4 +20,12 @@ public class ContactHelper extends HelperBase{
         type(By.name("mobile"), contactData.mobilePhone());
         type(By.name("email"), contactData.email());
     }
+
+    public void selectContactCheckbox() {
+        click(By.name("selected[]"));
+    }
+    public void initContactDeletionAndConfirmation() {
+        click(By.xpath("//input[@value='Delete']"));
+        wd.switchTo().alert().accept();
+    }
 }

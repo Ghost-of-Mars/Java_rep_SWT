@@ -27,4 +27,12 @@ public class GroupHelper extends HelperBase{
     public void initGroupCreation() {
         click(By.name("new"));
     }
+    public void selectGroupCheckbox() {
+        click(By.name("selected[]"));
+    }
+    public void initGroupDeletion() {
+        click(By.name("delete"));
+    }
+
+
 }

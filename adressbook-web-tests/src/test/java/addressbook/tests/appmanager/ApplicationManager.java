@@ -16,7 +16,7 @@ public class ApplicationManager {
     public void init() {
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        wd.get("http://localhost/addressbook/group.php");
+        wd.get("http://localhost/addressbook/");
         login("admin", "secret");
         groupHelper = new GroupHelper(wd);
         navigationHelper = new NavigationHelper(wd);
