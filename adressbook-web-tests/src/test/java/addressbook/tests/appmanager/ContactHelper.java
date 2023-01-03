@@ -28,4 +28,13 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//input[@value='Delete']"));
         wd.switchTo().alert().accept();
     }
+
+    public void initContactEdition() {
+        click(By.xpath("//img[@alt='Edit']"));
+        //click(By.cssSelector("img[alt=\"Edit\"]"));
+    }
+
+    public void submitContactEdition () {
+        click(By.name("update"));
+    }
 }

@@ -33,6 +33,12 @@ public class GroupHelper extends HelperBase{
     public void initGroupDeletion() {
         click(By.name("delete"));
     }
+    public void initGroupEdition() {
+        click(By.name("edit"));
+    }
+    public void submitGroupEdition() {
+        click(By.name("update"));
+    }
 
 
 }
