@@ -13,10 +13,9 @@ application {
 repositories {
     mavenCentral()
 }
-
 dependencies {
     testImplementation group: 'org.testng', name: 'testng', version: '7.7.0'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.7.2'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version:'3.141.59' // '4.7.2'
 }
 
 //sourceCompatibility = '17'
