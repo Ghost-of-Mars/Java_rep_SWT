@@ -3,8 +3,10 @@ package addressbook.tests.appmanager;
 import addressbook.tests.models.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
-public class ContactHelper extends HelperBase{
+public class ContactHelper extends HelperBase {
     public ContactHelper(WebDriver wd) {
         super(wd);
     }
@@ -13,17 +15,24 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
-    public void fillNewContactForm(ContactData contactData) {
+    public void fillNewContactForm(ContactData contactData, boolean creationOrModification) {
         type(By.name("firstname"), contactData.firstName());
         type(By.name("lastname"), contactData.lastName());
         type(By.name("address"), contactData.address());
         type(By.name("mobile"), contactData.mobilePhone());
         type(By.name("email"), contactData.email());
+        if (creationOrModification) {
+            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+        }
+        else {
+            Assert.assertFalse(isElementPresent(By.name("new_group")));
+        }
     }
 
     public void selectContactCheckbox() {
         click(By.name("selected[]"));
     }
+
     public void initContactDeletionAndConfirmation() {
         click(By.xpath("//input[@value='Delete']"));
         wd.switchTo().alert().accept();
@@ -34,7 +43,7 @@ public class ContactHelper extends HelperBase{
         //click(By.cssSelector("img[alt=\"Edit\"]"));
     }
 
-    public void submitContactEdition () {
+    public void submitContactEdition() {
         click(By.name("update"));
     }
 }

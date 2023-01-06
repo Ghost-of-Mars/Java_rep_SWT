@@ -13,7 +13,8 @@ public class ContactModificationTests extends TestBase {
                 "Two",
                 "ThreeAddress",
                 "9 999 999 99 99",
-                "Five@mail.jungle"));
+                "Five@mail.jungle",
+                null), false);
         app.getContactHelper().submitContactEdition();
         app.getNavigationHelper().goToTheHomeLink();
     }

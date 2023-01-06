@@ -13,7 +13,8 @@ public class ContactCreationTests extends TestBase {
             "Triangle",
              "Msk",
             "8 800 800 80 80",
-            "elias_triangle@gmail.com"));
+            "elias_triangle@gmail.com",
+            "Master"), true);
     app.getContactHelper().submitContactCreation();
     app.getNavigationHelper().goToTheHomeLink();
   }
