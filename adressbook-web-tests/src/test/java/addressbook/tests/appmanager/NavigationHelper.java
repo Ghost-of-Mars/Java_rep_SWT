@@ -14,6 +14,10 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void goToTheHomeLink() {
+        if (isElementPresent(By.id("maintable"))) {
+            return;
+        }
+
         click(By.linkText("home"));
     }
 
