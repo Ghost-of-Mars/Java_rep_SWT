@@ -47,12 +47,16 @@ public class ContactHelper extends HelperBase {
         click(By.name("update"));
     }
 
-    public void createContact(ContactData contactData, boolean creation) {
-        fillNewContactForm(contactData, creation);
+    public void createContact(ContactData contactData ) {
+        fillNewContactForm(contactData, true);
         submitContactCreation();
     }
 
     public boolean isThereAContact() {
         return isElementPresent(By.name("selected[]"));
+    }
+
+    public boolean isThereGroupWithName(String groupName) {
+        return isElementPresent(By.xpath("//*[@name=\"new_group\"]//*[text() = \"" + groupName +"\"]"));
     }
 }

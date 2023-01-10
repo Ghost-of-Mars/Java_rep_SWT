@@ -14,7 +14,7 @@ public class ContactDeletionTests extends TestBase {
                     "Msk",
                     "8 800 800 80 80",
                     "elias_triangle@gmail.com",
-                    "Master"), true);
+                    "Master"));
         }
         app.getContactHelper().selectContactCheckbox();
         app.getContactHelper().initContactDeletionAndConfirmation();
